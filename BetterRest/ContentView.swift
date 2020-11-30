@@ -11,8 +11,16 @@ struct ContentView: View {
 	@State private var wakeUp = Date()
 	
     var body: some View {
-		DatePicker("Please enter a date", selection: $wakeUp, in: Date()...) // displayedComponents: .hourAndMinute
-			.labelsHidden()
+		let formatter = DateFormatter()
+		formatter.timeStyle = .full
+		let dateString = formatter.string(from: Date())
+		
+		return VStack(spacing: 30) {
+			Text("dateString: \(dateString)")
+				
+			DatePicker("Please enter a date", selection: $wakeUp, in: Date()...) // displayedComponents: .hourAndMinute
+				.labelsHidden()
+		}
     }
 }
 
