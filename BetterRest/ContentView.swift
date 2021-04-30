@@ -13,9 +13,9 @@ struct ContentView: View {
 	@State private var sleepAmount = 8.0
 	@State private var coffeeAmount = 1
 	
-	@State private var alertTitle = ""
-	@State private var alertMessage = ""
-	@State private var showingAlert = false
+//	@State private var alertTitle = ""
+//	@State private var alertMessage = ""
+//	@State private var showingAlert = false
 	
     var body: some View {
 		NavigationView {
